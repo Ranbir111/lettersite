@@ -1,0 +1,96 @@
+.main-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.applyForm{
+    padding: 2% 0;
+    background: white;
+    border-radius: 0 20px 0 20px;
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.applyForm h1{
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: darkred;
+    text-shadow: 0 0 10px red;
+}
+.applyForm input{
+    background: whitesmoke;
+    font-weight: 600;
+    border: 0;
+    outline: 0;
+    border: 1px solid #efefef;
+    border-radius: 0 10px 0 10px;
+    width: 80%;
+    height: 45px;
+    margin: 15px 0;
+    padding: 0 10px;
+}
+.applyForm input::placeholder{
+    font-weight: 600;
+}
+.applyForm button{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 15px 0;
+    width: 80%;
+    height: 45px;
+    border: 0;
+    outline: 0;
+    background: linear-gradient(45deg,darkblue,darkred);
+    color: white;
+    border-radius: 10px;
+}
+
+.alert{
+    background: yellow;
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+@media screen AND (max-width:940px) {
+    .applyForm{
+        padding: 20px 0;
+        width: 70%;
+    }
+    .applyForm h1{
+        font-size: 30px;
+    }
+    .applyForm input{
+        width: 85%;
+    }
+    .applyForm button{
+        width: 85%;
+    }
+}
+@media screen AND (max-width:450px) {
+    .applyForm{
+        padding: 20px 0;
+        width: 96%;
+    }
+    .applyForm h1{
+        font-size: 30px;
+    }
+    .applyForm input{
+        width: 85%;
+    }
+    .applyForm button{
+        width: 85%;
+    }
+}
