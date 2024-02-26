@@ -33,11 +33,12 @@ function OtpVerify() {
           "emailTo": "ranbirgupta613@gmail.com",
           "sub": "Letter Confirmation",
           "sendername": "Shree Durga Model School",
-          "msg": "<style>.button{padding: 10px;background: linear-gradient(45deg,blue,red);color: white;border-radius: 5px;text-decoration: none;}</style><h2>A user has applied for OJT Letter</h2><br><p>Name: " + name + "<br>Symbol Number: " + symbol_num + "<br>Registration Number: " + registration_num + "<br>Phone Number: " + pnumber + "<br>Email: " + email + "</p><br><h3>Contact with the student then <a style='padding: 10px;background: linear-gradient(45deg,blue,red);color: white;border-radius: 5px;text-decoration: none;' class='button' href='https://ojtletterapply.000.pe/backend/letterConfirm.php?name=" + name + "&&sym_no=" + symbol_num + "&&reg_no=" + registration_num + "&&insti_name=" + institute_name + "&&email=" + email + "&&phone=" + pnumber + "'>Click here</a> to confirm</h3>"
+          "msg": `<style>.button{padding: 10px;background: linear-gradient(45deg,blue,red);color: white;border-radius: 5px;text-decoration: none;}</style><h2>A user has applied for OJT Letter</h2><br><p>Name: " + name + "<br>Symbol Number: " + symbol_num + "<br>Registration Number: " + registration_num + "<br>Phone Number: " + pnumber + "<br>Email: " + email + "</p><br><h3>Contact with the student then <a style='padding: 10px;background: linear-gradient(45deg,blue,red);color: white;border-radius: 5px;text-decoration: none;' class='button' href="https://ojtletterapply.000.pe/backend/letterConfirm.php?name=` + name + `&&sym_no=` + symbol_num + `&&reg_no=` + registration_num + `&&insti_name=` + institute_name + `&&email=` + email + `&&phone=` + pnumber + `">Click here</a> to confirm</h3>`
         })
       })
+    
       if (response.status === 200) {
-        // localStorage.clear();
+        localStorage.clear();
         localStorage.setItem("status", "notConfirmed");
         navigate("/landingforapplier");
       }
